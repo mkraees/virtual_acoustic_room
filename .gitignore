@@ -109,3 +109,8 @@ venv.bak/
 *DS_Store*
 *._*
 *~
+
+# usee addition
+
+*.err
+

@@ -1,0 +1,74 @@
+(want to clone a repo from https://github.com/msaddler/virtual_acoustic_room.git 
+and commit it to my personal after making edits and then to organisation after done all polishing.)
+
+Step 1: Fork the Repository (Optional but Recommended)
+
+Since you plan to edit the repository, it’s a good idea to fork it to your personal GitHub account before cloning.
+	1.	Go to the original repo: virtual_acoustic_room.
+	2.	Click the Fork button (top right).
+	3.	Select your personal GitHub account as the destination.
+
+⸻
+
+Step 2: Clone the Forked Repository
+
+Once forked, clone your personal repo to your local machine:
+
+git clone https://github.com/YOUR-USERNAME/virtual_acoustic_room.git
+
+Replace YOUR-USERNAME with your GitHub username.
+
+⸻
+
+Step 3: Make Changes & Commit
+	1.	Navigate into the repo:
+
+cd virtual_acoustic_room
+
+
+	2.	Make your necessary edits.
+	3.	Stage and commit the changes:
+
+git add .
+git commit -m "Your commit message"
+
+
+	4.	Push changes to your personal GitHub:
+
+git push origin main
+
+
+
+⸻
+
+Step 4: Transfer to Your Organization
+
+After all polishing is done, you can move your changes to your organization’s repository.
+
+Option 1: Transfer Ownership (If You Want to Move Everything)
+	1.	Go to your repository on GitHub.
+	2.	Click Settings → General.
+	3.	Scroll down to “Danger Zone” and click “Transfer Ownership”.
+	4.	Enter your organization’s name to transfer the repository.
+
+Option 2: Push to an Existing Org Repo (Preferred for Collaborative Work)
+	1.	Add your organization’s repo as a new remote:
+
+git remote add org https://github.com/ORG-NAME/virtual_acoustic_room.git
+
+
+	2.	Push to the organization repository:
+
+git push org main
+
+
+
+⸻
+
+Bonus: Keep Original Repo as Upstream (Optional)
+
+If you want to keep pulling updates from the original repository, set it as upstream:
+
+git remote add upstream https://github.com/msaddler/virtual_acoustic_room.git
+git fetch upstream
+git merge upstream/main
